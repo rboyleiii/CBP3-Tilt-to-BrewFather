@@ -32,6 +32,7 @@ brewfather_tilt_id = None
 #        cbpi.app.logger.info(s)
 
 def log(text):
+    if DEBUG:
 	filename = "./logs/Tilt2BrewF.log"
 	formatted_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 	with open(filename, "a") as file:
@@ -56,14 +57,14 @@ def init(cbpi):
     if brewfather_tilt_comment is None:
 	log("Init brewfather config Comment")
 	try:
-# TODO: is param2 a default value?
+	    # TODO: is param2 a default value?
 	    cbpi.add_config_parameter("brewfather_tilt_comment", "", "text", "Brewfather comment")
 	except:
 	    cbpi.notify("Brewfather Error", "Unable to update Brewfather comment parameter", type="danger")
     if brewfather_tilt_id is None:
 	log("Init brewfather config URL")
 	try:
-# TODO: is param2 a default value?
+	    # TODO: is param2 a default value?
 	    cbpi.add_config_parameter("brewfather_tilt_id", "", "text", "Brewfather id")
 	except:
 	    cbpi.notify("Brewfather Error", "Unable to update Brewfather id parameter", type="danger")
