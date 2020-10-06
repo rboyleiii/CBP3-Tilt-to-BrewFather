@@ -4,7 +4,8 @@ Send tilt information from CraftBeerPi3 to the BrewFather website for tracking f
 ## Pre-requisites
 Brewfather https://web.brewfather.app
 CraftBeerPi 3.0 https://github.com/Manuel83/craftbeerpi3
----- add the tilt plugin
+TiltHydrometerPlugin https://github.com/IndyJoeA/cbpi_Tilt.git
+   --Tilt sensores defined in hardware settings
 
 ## Configuration for CraftBeerPi
 1. In CraftBeerPi3 set up each Tilt as a pair of sensors, one for Temperature immediately followed by the same Tilt for Gravity
